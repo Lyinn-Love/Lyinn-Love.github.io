@@ -2,111 +2,81 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://Lyinn-Love.github.io/ar/archives/</loc>
+    <loc>http://localhost:1313/ar/archives/</loc>
     <lastmod>2019-05-28T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://Lyinn-Love.github.io/archives/"
+                href="http://localhost:1313/archives/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ar"
-                href="https://Lyinn-Love.github.io/ar/archives/"
+                href="http://localhost:1313/ar/archives/"
                 />
   </url><url>
-    <loc>https://Lyinn-Love.github.io/ar/</loc>
+    <loc>http://localhost:1313/ar/</loc>
     <lastmod>2019-05-28T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://Lyinn-Love.github.io/en/"
+                href="http://localhost:1313/en/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://Lyinn-Love.github.io/"
+                href="http://localhost:1313/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ar"
-                href="https://Lyinn-Love.github.io/ar/"
+                href="http://localhost:1313/ar/"
                 />
   </url><url>
-    <loc>https://Lyinn-Love.github.io/ar/categories/</loc>
-    <lastmod>2019-03-09T00:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/ar/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://Lyinn-Love.github.io/en/categories/"
+                href="http://localhost:1313/en/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://Lyinn-Love.github.io/categories/"
+                href="http://localhost:1313/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ar"
-                href="https://Lyinn-Love.github.io/ar/categories/"
+                href="http://localhost:1313/ar/categories/"
                 />
   </url><url>
-    <loc>https://Lyinn-Love.github.io/ar/tags/</loc>
-    <lastmod>2019-03-09T00:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/ar/tags/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://Lyinn-Love.github.io/en/tags/"
+                href="http://localhost:1313/en/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://Lyinn-Love.github.io/tags/"
+                href="http://localhost:1313/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ar"
-                href="https://Lyinn-Love.github.io/ar/tags/"
+                href="http://localhost:1313/ar/tags/"
                 />
   </url><url>
-    <loc>https://Lyinn-Love.github.io/ar/categories/%D8%AA%D8%AC%D8%B1%D8%A8%D8%A9/</loc>
-    <lastmod>2019-03-09T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://Lyinn-Love.github.io/ar/categories/%D8%AA%D8%AC%D8%B1%D8%A8%D8%A9-%D9%85%D8%B9-%D9%81%D8%B1%D8%A7%D8%BA%D8%A7%D8%AA/</loc>
-    <lastmod>2019-03-09T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://Lyinn-Love.github.io/ar/tags/%D9%85%D8%A7%D8%B1%D9%83%D8%AF%D8%A7%D9%88%D9%86/</loc>
-    <lastmod>2019-03-09T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://Lyinn-Love.github.io/ar/p/%D9%85%D8%AB%D8%A7%D9%84-%D9%86%D8%B5/</loc>
-    <lastmod>2019-03-09T00:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/ar/search/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://Lyinn-Love.github.io/p/placeholder-text/"
+                href="http://localhost:1313/search/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ar"
-                href="https://Lyinn-Love.github.io/ar/p/%D9%85%D8%AB%D8%A7%D9%84-%D9%86%D8%B5/"
-                />
-  </url><url>
-    <loc>https://Lyinn-Love.github.io/ar/tags/%D9%86%D8%B5/</loc>
-    <lastmod>2019-03-09T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://Lyinn-Love.github.io/ar/tags/%D9%88%D8%B3%D9%85-%D9%85%D8%B9-%D9%81%D8%B1%D8%A7%D8%BA%D8%A7%D8%AA/</loc>
-    <lastmod>2019-03-09T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://Lyinn-Love.github.io/ar/search/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://Lyinn-Love.github.io/search/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ar"
-                href="https://Lyinn-Love.github.io/ar/search/"
+                href="http://localhost:1313/ar/search/"
                 />
   </url>
 </urlset>
