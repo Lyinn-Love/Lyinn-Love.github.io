@@ -2,34 +2,34 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>璃音-Lyinn</title>
-        <link>http://localhost:1313/</link>
+        <link>https://Lyinn-Love.github.io/</link>
         <description>Recent content on 璃音-Lyinn</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <copyright>璃音-Lyinn</copyright>
-        <lastBuildDate>Sun, 08 Mar 2026 11:57:31 +0800</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 08 Mar 2026 11:57:31 +0800</lastBuildDate><atom:link href="https://Lyinn-Love.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>我的第一篇博客</title>
-        <link>http://localhost:1313/p/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/</link>
+        <link>https://Lyinn-Love.github.io/p/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/</link>
         <pubDate>Sun, 08 Mar 2026 11:57:31 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/</guid>
+        <guid>https://Lyinn-Love.github.io/p/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/</guid>
         <description>&lt;h3 id=&#34;这是我的第一篇博客&#34;&gt;这是我的第一篇博客
 &lt;/h3&gt;</description>
         </item>
         <item>
         <title>归档</title>
-        <link>http://localhost:1313/archives/</link>
+        <link>https://Lyinn-Love.github.io/archives/</link>
         <pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:1313/archives/</guid>
+        <guid>https://Lyinn-Love.github.io/archives/</guid>
         <description></description>
         </item>
         <item>
         <title></title>
-        <link>http://localhost:1313/</link>
+        <link>https://Lyinn-Love.github.io/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:1313/</guid>
+        <guid>https://Lyinn-Love.github.io/</guid>
         <description>&lt;h2 id=&#34;icon-user&#34;&gt;title: 关于
 menu:
 main:
@@ -41,10 +41,10 @@ icon: user
         </item>
         <item>
         <title>搜索</title>
-        <link>http://localhost:1313/search/</link>
+        <link>https://Lyinn-Love.github.io/search/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:1313/search/</guid>
+        <guid>https://Lyinn-Love.github.io/search/</guid>
         <description></description>
         </item>
         
