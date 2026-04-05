@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>璃音-Lyinn</title>
+    
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌸</text></svg>">
+    
+    <link href="https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-gradient: linear-gradient(135deg, rgba(255,230,250,0.85) 0%, rgba(255,255,255,0.9) 50%, rgba(224,242,254,0.85) 100%);
+            --card-bg: rgba(255, 255, 255, 0.65);
+            --text-main: #5c6b73;
+            --pink-accent: #ff8fb8;
+            --blue-accent: #87ceeb;
+        }
+        body {
+            margin: 0; padding: 0;
+            font-family: 'Nunito', 'PingFang SC', sans-serif;
+            color: var(--text-main);
+            background: url('https://w.wallhaven.cc/full/j3/wallhaven-j3m8y5.png') center/cover fixed;
+            line-height: 1.8;
+        }
+        .bg-overlay {
+            position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+            background: var(--bg-gradient);
+            z-index: -1;
+        }
+        .container {
+            max-width: 800px; margin: 0 auto; padding: 40px 20px;
+            position: relative; z-index: 1;
+        }
+        .glass-card {
+            background: var(--card-bg);
+            backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px);
+            border-radius: 25px; border: 1px solid rgba(255, 255, 255, 0.8);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            padding: 40px; margin-bottom: 30px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .glass-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(255, 143, 184, 0.2);
+        }
+        .header { text-align: center; margin-bottom: 50px; }
+        .avatar {
+            width: 120px; height: 120px; border-radius: 50%;
+            border: 4px solid rgba(255, 255, 255, 0.9);
+            box-shadow: 0 8px 25px rgba(255, 143, 184, 0.4);
+            transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            object-fit: cover;
+        }
+        .avatar:hover { transform: rotate(360deg) scale(1.1); }
+        .site-id {
+            font-family: 'ZCOOL KuaiLe', cursive; font-size: 2.8rem; margin: 15px 0 5px;
+            background: linear-gradient(45deg, var(--pink-accent), var(--blue-accent));
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.05);
+        }
+        .site-bio { font-size: 1.1rem; color: #8da3af; font-weight: 600; }
+        a { color: var(--pink-accent); text-decoration: none; transition: color 0.3s; }
+        a:hover { color: var(--blue-accent); }
+        h1, h2, h3 { font-family: 'ZCOOL KuaiLe', cursive; color: var(--blue-accent); }
+        .post-title { font-size: 2rem; color: var(--pink-accent); margin-top: 0; text-align: center; }
+        .post-meta { text-align: center; font-size: 0.9rem; color: #a0b3c0; margin-bottom: 20px; }
+        .content { font-size: 1.15rem; }
+        .content img { max-width: 100%; border-radius: 15px; }
+        .content pre { background: rgba(0,0,0,0.05); padding: 15px; border-radius: 10px; overflow-x: auto; }
+        .content code { background: rgba(0,0,0,0.05); padding: 2px 6px; border-radius: 4px; font-family: monospace; }
+        .footer { text-align: center; margin-top: 50px; color: #a0b3c0; font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+    <div class="bg-overlay"></div>
+    <div class="container">
+        <header class="header">
+            <a href="https://lyinn-love.github.io/">
+                <img src="/img/avatar.png" alt="Avatar" class="avatar">
+            </a>
+            <div class="site-id">璃音-Lyinn</div>
+            <div class="site-bio">满堂花醉三千客</div>
+        </header>
+        <main>
+            
+<article class="glass-card">
+    <h1 class="post-title">AI 辅助 FPGA 开发：我手搓了一个 Vivado MCP Server</h1>
+    <div class="post-meta">2026-04-05</div>
+    <div class="content">
+        <h2 id="背景与缘起">背景与缘起</h2>
+<p>今天心血来潮，想要在 Trae IDE 里用大模型（MCP）直接控制 Vivado 进行 FPGA 开发。原本试着使用开源社区或第三方的 <code>mcp_synthpilot</code>，但发现其核心是一个编译好的闭源二进制黑盒，并且存在 License 限制，无法直接修改和扩展功能。</p>
+<p>于是，在我的专属 AI 助理（一只贴心的猫娘 🐱）的陪伴下，我们决定从零开始，<strong>自己用 Python 手搓一个轻量级的平替版 MCP Server：MiniSynthPilot！</strong></p>
+<h2 id="核心实现tcp-通信与-tcl-交互">核心实现：TCP 通信与 Tcl 交互</h2>
+<p>我们知道，Vivado 提供了非常强大的 Tcl 交互接口。如果使用 <code>batch</code> 模式，每次调用都会启动和关闭 Vivado，不仅慢，而且无法直观地看到工程界面的变化。</p>
+<p>因此，我们的思路是：</p>
+<ol>
+<li><strong>启动常驻的 Vivado GUI</strong>：用 Python <code>subprocess</code> 拉起一个 Vivado 图形界面，并让它运行一个极其轻量的 Tcl TCP Server。</li>
+<li><strong>监听 9999 端口</strong>：这个 Tcl Server 在后台默默监听，接收来自 Python 的指令。</li>
+<li><strong>MCP 工具封装</strong>：使用 <code>FastMCP</code> 库，把“创建工程”、“添加文件”、“综合”、“仿真”等常用操作封装成工具，通过 Socket 将具体的 Tcl 脚本发送给 Vivado 执行。</li>
+</ol>
+<p>这样，当我向大模型下达指令时，我的屏幕上就会直接弹出 Vivado 界面，并自动执行诸如建工程、加代码、跑波形等操作，一切尽在掌握！</p>
+<h2 id="踩坑记录windows-下的编码乱码">踩坑记录：Windows 下的编码乱码</h2>
+<p>在开发过程中，我们遇到了一个非常典型的坑。</p>
+<p>当 AI 调用 MCP 生成带中文输出（比如 <code>puts &quot;✅ 实现完成！&quot;</code>）的 Tcl 脚本并通过 Socket 发送给 Vivado 时，Vivado 的 Tcl Console 里出现了一堆“火星文”乱码。</p>
+<p><strong>原因分析</strong>：
+Python 脚本在写入临时 <code>.tcl</code> 文件时，默认使用了 <code>UTF-8</code> 编码。然而，运行在 Windows 环境下的 Vivado，其 Tcl Console 默认使用的是系统区域代码页（通常是 GBK 编码）。</p>
+<p><strong>解决方案</strong>：
+我们修改了临时文件的写入逻辑，动态获取系统默认编码来保存 Tcl 脚本：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> sys
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> tempfile
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>sys_encoding <span style="color:#f92672">=</span> sys<span style="color:#f92672">.</span>getdefaultencoding() <span style="color:#75715e"># 通常在中文 Windows 下为 gbk</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">with</span> tempfile<span style="color:#f92672">.</span>NamedTemporaryFile(mode<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;w&#39;</span>, suffix<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;.tcl&#39;</span>, delete<span style="color:#f92672">=</span><span style="color:#66d9ef">False</span>, encoding<span style="color:#f92672">=</span>sys_encoding) <span style="color:#66d9ef">as</span> f:
+</span></span><span style="display:flex;"><span>    f<span style="color:#f92672">.</span>write(tcl_content)
+</span></span><span style="display:flex;"><span>    tcl_path <span style="color:#f92672">=</span> f<span style="color:#f92672">.</span>name<span style="color:#f92672">.</span>replace(<span style="color:#e6db74">&#39;</span><span style="color:#ae81ff">\\</span><span style="color:#e6db74">&#39;</span>, <span style="color:#e6db74">&#39;/&#39;</span>)
+</span></span></code></pre></div><p>修改后，Vivado 里的中文输出瞬间恢复了正常，赏心悦目！</p>
+<h2 id="成果展示与-skill-封装">成果展示与 Skill 封装</h2>
+<p>最终，我们成功封装了以下几个非常好用的 MCP 工具：</p>
+<ul>
+<li><code>create_project</code>: 一键创建工程，并强制校验器件型号（如 <code>xc7z020clg400-1</code>）。</li>
+<li><code>add_source_file</code>: 添加 Verilog 代码并更新层级。</li>
+<li><code>run_simulation</code>: 添加 Testbench，设为顶层，并启动行为级仿真。</li>
+<li><code>run_implementation</code>: 跑完综合与实现，并自动打开直观的 Device 器件视图！</li>
+<li><code>get_synthesis_warnings</code>: 自动解析 <code>runme.log</code>，提取警告信息反馈给大模型进行错误排查。</li>
+</ul>
+<p>为了让这套工作流固化下来，我们最后使用 Trae 的 Skill 功能，将整个 Vivado 开发的上下文、避坑指南和交互风格封装成了名为 <code>fpga-vivado</code> 的技能包 (<code>.trae/skills/fpga-vivado/SKILL.md</code>)。</p>
+<p>以后只要我想做 FPGA 项目，打开新对话就能直接进入“人机结对编程 + 自动控制 Vivado”的沉浸式体验。</p>
+<p>今天也是充满收获的一天，下次见啦！！！</p>
+
+    </div>
+    <div style="text-align: center; margin-top: 40px;">
+        <a href="https://lyinn-love.github.io/" style="display: inline-block; padding: 8px 20px; border-radius: 20px; background: rgba(255,255,255,0.8); border: 1px solid var(--blue-accent); color: var(--blue-accent); font-weight: bold;">← 返回主页</a>
+    </div>
+</article>
+
+        </main>
+        <footer class="footer">
+            &copy; 2026 璃音-Lyinn
+        </footer>
+    </div>
+</body>
+</html>

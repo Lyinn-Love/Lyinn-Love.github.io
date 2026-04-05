@@ -1,0 +1,131 @@
+/* 引入可爱的字体 */
+@import url('https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap');
+
+/* =========================================
+   全局渐变背景和光标 (粉白蓝柔和渐变)
+   ========================================= */
+body {
+  font-family: "Nunito", "PingFang SC", "Microsoft YaHei", sans-serif !important;
+  color: #5c6b73 !important; /* 柔和灰蓝色正文 */
+  
+  /* 柔和的二次元粉白蓝渐变背景，覆盖在原有背景图上 */
+  background: linear-gradient(135deg, rgba(255,230,250,0.6) 0%, rgba(255,255,255,0.7) 50%, rgba(224,242,254,0.6) 100%) !important;
+  background-attachment: fixed !important;
+}
+
+/* =========================================
+   透明毛玻璃卡片式布局 (Glassmorphism)
+   ========================================= */
+.dream-card {
+  background: rgba(255, 255, 255, 0.65) !important; /* 半透明白色 */
+  backdrop-filter: blur(15px) !important;
+  -webkit-backdrop-filter: blur(15px) !important;
+  border-radius: 25px !important;
+  border: 1px solid rgba(255, 255, 255, 0.8) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03) !important;
+  transition: all 0.3s ease !important;
+}
+
+.dream-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(255, 182, 193, 0.2) !important;
+}
+
+/* 头部 Header 改造 */
+.dream-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px !important;
+}
+
+/* 头像样式 */
+.dream-header .avatar {
+  width: 120px !important;
+  height: 120px !important;
+  border-radius: 50% !important;
+  border: 4px solid rgba(255, 255, 255, 0.8) !important;
+  box-shadow: 0 8px 25px rgba(255, 182, 193, 0.4) !important;
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+}
+.dream-header .avatar:hover {
+  transform: rotate(360deg) scale(1.1) !important;
+}
+
+/* ID 样式 */
+.dream-header .title {
+  font-family: 'ZCOOL KuaiLe', cursive !important;
+  font-size: 2.8rem !important;
+  font-weight: 700 !important;
+  background: linear-gradient(45deg, #ff8fb8, #87ceeb) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  letter-spacing: 2px !important;
+  margin-top: 15px !important;
+  margin-bottom: 10px !important;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.05) !important;
+}
+
+/* 个人简介 */
+.dream-header .motto {
+  font-size: 1.1rem !important;
+  color: #8da3af !important;
+  font-weight: 600 !important;
+  letter-spacing: 1px !important;
+}
+
+/* =========================================
+   文章卡片样式
+   ========================================= */
+.dream-article-list .article-title {
+  font-family: 'ZCOOL KuaiLe', cursive !important;
+  font-size: 1.8rem !important;
+  color: #ff8fb8 !important;
+  text-align: center !important;
+}
+.dream-article-list .article-title a {
+  color: #ff8fb8 !important;
+  transition: color 0.3s ease !important;
+}
+.dream-article-list .article-title a:hover {
+  color: #87ceeb !important;
+}
+
+.dream-article-list .article-meta {
+  text-align: center !important;
+  color: #a0b3c0 !important;
+  font-size: 0.95rem !important;
+}
+
+.dream-article-content {
+  font-size: 1.15rem !important;
+  color: #5c6b73 !important;
+  line-height: 2 !important;
+}
+
+/* 文章内的标题 */
+.dream-article-content h2, .dream-article-content h3 {
+  font-family: 'ZCOOL KuaiLe', cursive !important;
+  color: #87ceeb !important; /* 浅蓝色小标题 */
+  border-bottom: 2px dashed rgba(135, 206, 235, 0.4) !important;
+  padding-bottom: 10px !important;
+}
+
+/* 链接样式 */
+.dream-article-content a {
+  color: #ff8fb8 !important;
+  text-decoration: none !important;
+  border-bottom: 2px solid rgba(255, 143, 184, 0.3) !important;
+  transition: all 0.3s ease !important;
+}
+.dream-article-content a:hover {
+  color: #87ceeb !important;
+  border-bottom: 2px solid #87ceeb !important;
+}
+
+/* 隐藏无用的标签和分类，确保极简 */
+.dream-article-list .tags, .dream-article-list .categories {
+  display: none !important;
+}

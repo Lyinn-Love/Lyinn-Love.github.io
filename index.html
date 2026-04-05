@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta name="generator" content="Hugo 0.157.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>璃音-Lyinn</title>
+    
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌸</text></svg>">
+    
+    <link href="https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-gradient: linear-gradient(135deg, rgba(255,230,250,0.85) 0%, rgba(255,255,255,0.9) 50%, rgba(224,242,254,0.85) 100%);
+            --card-bg: rgba(255, 255, 255, 0.65);
+            --text-main: #5c6b73;
+            --pink-accent: #ff8fb8;
+            --blue-accent: #87ceeb;
+        }
+        body {
+            margin: 0; padding: 0;
+            font-family: 'Nunito', 'PingFang SC', sans-serif;
+            color: var(--text-main);
+            background: url('https://w.wallhaven.cc/full/j3/wallhaven-j3m8y5.png') center/cover fixed;
+            line-height: 1.8;
+        }
+        .bg-overlay {
+            position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+            background: var(--bg-gradient);
+            z-index: -1;
+        }
+        .container {
+            max-width: 800px; margin: 0 auto; padding: 40px 20px;
+            position: relative; z-index: 1;
+        }
+        .glass-card {
+            background: var(--card-bg);
+            backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px);
+            border-radius: 25px; border: 1px solid rgba(255, 255, 255, 0.8);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            padding: 40px; margin-bottom: 30px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .glass-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(255, 143, 184, 0.2);
+        }
+        .header { text-align: center; margin-bottom: 50px; }
+        .avatar {
+            width: 120px; height: 120px; border-radius: 50%;
+            border: 4px solid rgba(255, 255, 255, 0.9);
+            box-shadow: 0 8px 25px rgba(255, 143, 184, 0.4);
+            transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            object-fit: cover;
+        }
+        .avatar:hover { transform: rotate(360deg) scale(1.1); }
+        .site-id {
+            font-family: 'ZCOOL KuaiLe', cursive; font-size: 2.8rem; margin: 15px 0 5px;
+            background: linear-gradient(45deg, var(--pink-accent), var(--blue-accent));
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.05);
+        }
+        .site-bio { font-size: 1.1rem; color: #8da3af; font-weight: 600; }
+        a { color: var(--pink-accent); text-decoration: none; transition: color 0.3s; }
+        a:hover { color: var(--blue-accent); }
+        h1, h2, h3 { font-family: 'ZCOOL KuaiLe', cursive; color: var(--blue-accent); }
+        .post-title { font-size: 2rem; color: var(--pink-accent); margin-top: 0; text-align: center; }
+        .post-meta { text-align: center; font-size: 0.9rem; color: #a0b3c0; margin-bottom: 20px; }
+        .content { font-size: 1.15rem; }
+        .content img { max-width: 100%; border-radius: 15px; }
+        .content pre { background: rgba(0,0,0,0.05); padding: 15px; border-radius: 10px; overflow-x: auto; }
+        .content code { background: rgba(0,0,0,0.05); padding: 2px 6px; border-radius: 4px; font-family: monospace; }
+        .footer { text-align: center; margin-top: 50px; color: #a0b3c0; font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+    <div class="bg-overlay"></div>
+    <div class="container">
+        <header class="header">
+            <a href="https://lyinn-love.github.io/">
+                <img src="/img/avatar.png" alt="Avatar" class="avatar">
+            </a>
+            <div class="site-id">璃音-Lyinn</div>
+            <div class="site-bio">满堂花醉三千客</div>
+        </header>
+        <main>
+            
+    
+    <article class="glass-card" style="padding: 25px 40px; margin-bottom: 20px;">
+        <h2 class="post-title" style="margin-bottom: 10px; font-size: 1.6rem;"><a href="https://lyinn-love.github.io/post/vivado-mcp-dev/">AI 辅助 FPGA 开发：我手搓了一个 Vivado MCP Server</a></h2>
+        <div class="post-meta" style="margin-bottom: 0;">2026-04-05</div>
+    </article>
+    
+    <article class="glass-card" style="padding: 25px 40px; margin-bottom: 20px;">
+        <h2 class="post-title" style="margin-bottom: 10px; font-size: 1.6rem;"><a href="https://lyinn-love.github.io/post/myfirstblog/">初见</a></h2>
+        <div class="post-meta" style="margin-bottom: 0;">2026-03-08</div>
+    </article>
+    
+
+        </main>
+        <footer class="footer">
+            &copy; 2026 璃音-Lyinn
+        </footer>
+    </div>
+</body>
+</html>
